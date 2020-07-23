@@ -20,16 +20,8 @@ const rulesArry = [ 'Items MUST be organized HEAVIEST at the bottom and LIGHTEST
                     'You must have AT LEAST 8 containers of items at your station', 'When placing an item in a ']
 
                     
-// const timer = document.getElementById('timer')
-// // timer.innerText = '00:00' 
-// const counter = 0
-// const timeLeft = 60
-// function setTimer(){
-//     counter++;
-//     timer.innerText = counter // the reason this doesnt show yet is because we are not calling it yet
-// };
 
-// setInterval(setTimer,1000)
+
 
 // https://www.youtube.com/watch?v=LAaf7-WuJJQ
 let countDown;
@@ -38,17 +30,27 @@ function timer(seconds){
     // console.log(seconds)
     const now = Date.now();
     const then = now + seconds * 1000; // 1000 represents miliseconds which is means 1 second
-    console.log({now,then})
+    displayTimeLeft(seconds)
 
     countDown = setInterval( () => {
         const secondsLeft = Math.round((then - Date.now()) / 1000); // otherwise it would have been by miliseconds
-        console.log(secondsLeft)
+        // check if we should stop it
         if(secondsLeft < 0){
             clearInterval(countDown);
             return; 
         }
+        // display it
+        displayTimeLeft(secondsLeft)
     }, 1000) // this means that it will run every second
-}
+};
 
-timer(10)
+function displayTimeLeft(seconds){
+    const minutes = Math.floor(seconds / 60); // minutes should be whole numbers 
+    const remainderSeconds = seconds % 60 ; // we get the remainder that is actually the seconds
+    const displayTime = `${minutes}:${remainderSeconds < 10 ? '0' : ''}`
+    const timer = document.getElementById('timer')
+    timer.innerText = displayTime 
+    console.log(displayTime)
+};
 
+timer(124)
