@@ -11,8 +11,7 @@ playButton.innerText = 'Press To Play'
 
 
 const rulesContainer = document.querySelector('#rules')
-const li = document.createElement('li')
-li.setAttribute('id','one-rule')
+// const li = document.createElement('li')
 
 const rulesArry = [ 'Items MUST be organized HEAVIEST at the bottom and LIGHTEST at the top', 
                     'A row MUST NOT be over the MAX WEIGHT', 'Some items can only be place at a specifc pod', 
@@ -21,8 +20,9 @@ const rulesArry = [ 'Items MUST be organized HEAVIEST at the bottom and LIGHTEST
 
 const rules = rulesArry.map( function(rule){
     console.log(rule)
-return `<li> ${rule} <li>`
+return '<li>'+ rule + '</li>'
 })
+
 
 // li.append(rules)
 rulesContainer.append(rules)
