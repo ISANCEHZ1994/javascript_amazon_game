@@ -1,33 +1,25 @@
-
-const smallPod = document.createElement("div")
-const mediumPod = document.createElement("div")
-const largePod = document.createElement("div")
-
-
 const introContainer = document.getElementsByClassName('intro-container')
+
+const buttonContainer = document.getElementById('button-container')
 const playButton = document.createElement('button')
 playButton.innerText = 'Press To Play'
-// introContainer.append(playButton) why does append NOT work in this case?
+buttonContainer.append(playButton)
 
-
-const rulesContainer = document.querySelector('#rules')
-// const li = document.createElement('li')
-
+// THIS IS FOR THE RULES <----------------------------------------------------------------------------------
 const rulesArry = [ 'Items MUST be organized HEAVIEST at the bottom and LIGHTEST at the top', 
                     'A row MUST NOT be over the MAX WEIGHT', 'Some items can only be place at a specifc pod', 
                     'You CANNOT place the same items PARALLEL or PERPENDICULAR to each other (think either a Checkers or Halo shape)',
                     'You must have AT LEAST 8 containers of items at your station']
 
 const rules = rulesArry.map( function(rule){
-    console.log(rule)
-return '<li>'+ rule + '</li>'
+    const rulesContainer = document.querySelector('#rules')
+    const li = document.createElement('li')
+    li.innerText = rule
+    rulesContainer.append(li)
 })
 
 
-// li.append(rules)
-rulesContainer.append(rules)
-
-// THIS IS THE COUNTDOWN TIMER <----------------------------------------------           
+// THIS IS THE COUNTDOWN TIMER <------------------------------------------------------------------------------         
 // https://www.youtube.com/watch?v=LAaf7-WuJJQ
 let countDown;
 
@@ -62,7 +54,27 @@ function displayTimeLeft(seconds){
         timesUp.innerText = 'TIMES UP'
     }
 };
+// timer(900) // 900 seconds is 15 minutes 
 
+// SMALL POD WORK <------------------------------------------------------------------------------  
 
+const smallPod = document.createElement("div")
+smallPod.setAttribute("id","small-pod")
 
-timer(900) // 900 seconds is 15 minutes 
+const smallRow1 = document.createElement('div')
+smallRow1.innerText = 'this is the first row'
+
+const smallRow2 = document.createElement('div')
+smallRow2.innerText = 'this is the second row'
+
+const smallRow3 = document.createElement('div')
+smallRow3.innerText = 'this is the third row'
+
+const pod = document.getElementById('pod')
+// smallPod.innerText = 'Here is the small pod'
+smallPod.append(smallRow1)
+smallPod.append(smallRow2)
+smallPod.append(smallRow3)
+
+pod.append(smallPod)
+

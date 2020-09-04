@@ -1,3 +1,24 @@
 body{
    background-color: #FF9900; 
 }
+
+#small-pod{
+  width: 450px;
+  height: 400px;
+  border: 8px solid rgb(226, 230, 12);
+  padding: 40px;
+  /* margin: 20px; */
+  text-align: center;
+  display: grid;
+  grid-template-rows: auto auto auto;
+  background-color: #2196F3;
+}
+
+#small-pod div{
+  text-align: center;
+  width: 380px;
+  height: 20px;
+  border: 5px solid rgb(226, 230, 12);
+  padding: 30px;
+  background-color: aliceblue;
+}
