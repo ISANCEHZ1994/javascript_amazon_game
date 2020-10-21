@@ -73,10 +73,7 @@ smallRow3.innerText = 'this is the third row'
 const pod = document.querySelector('.pod')
 
 // smallPod.innerText = 'Here is the small pod'
-smallPod.append(smallRow1)
-smallPod.append(smallRow2)
-smallPod.append(smallRow3)
-
+smallPod.append(smallRow1, smallRow2, smallRow3)
 pod.append(smallPod)
 
 // STATION WORK <------------------------------------------------------------------------------
@@ -84,6 +81,6 @@ pod.append(smallPod)
 const stationContainer = document.querySelector('.station-container')
 const staticStation = document.createElement('div')
 staticStation.setAttribute('class', 'station')
-staticStation.innerText = 'here is some typeing'
+staticStation.innerText = 'here is some typing'
 stationContainer.append(staticStation)
 

@@ -2,7 +2,22 @@ body{
    background-color: #FF9900; 
 }
 
+.bottom-section{
+  display: flex;
+}
 
+.game-container{
+  flex: 1;
+}
+
+.station-container{
+  margin-right: 20px;
+  width: 850px;
+  height: 400px;
+  background-color: blueviolet;
+  border: 5px solid #00A8E1;
+  text-align: center;
+}
 
 #small-pod{
   width: 450px;
@@ -14,6 +29,7 @@ body{
   display: grid;
   grid-template-rows: auto auto auto;
   background-color: #2196F3;
+
 }
 
 #small-pod div{
@@ -26,9 +42,5 @@ body{
 }
 
 
-.station-container{
-  width: 850px;
-  height: 400px;
-  background-color: blueviolet;
-}
+
 
