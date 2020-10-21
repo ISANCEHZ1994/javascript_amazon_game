@@ -1,6 +1,6 @@
-const introContainer = document.getElementsByClassName('intro-container')
+const introContainer = document.querySelector('.intro-container')
 
-const buttonContainer = document.getElementById('button-container')
+const buttonContainer = document.querySelector('.button-container')
 const playButton = document.createElement('button')
 playButton.innerText = 'Press To Play'
 buttonContainer.append(playButton)
@@ -12,7 +12,7 @@ const rulesArry = [ 'Items MUST be organized HEAVIEST at the bottom and LIGHTEST
                     'You must have AT LEAST 8 containers of items at your station']
 
 const rules = rulesArry.map( function(rule){
-    const rulesContainer = document.querySelector('#rules')
+    const rulesContainer = document.querySelector('.rules')
     const li = document.createElement('li')
     li.innerText = rule
     rulesContainer.append(li)
@@ -70,11 +70,20 @@ smallRow2.innerText = 'this is the second row'
 const smallRow3 = document.createElement('div')
 smallRow3.innerText = 'this is the third row'
 
-const pod = document.getElementById('pod')
+const pod = document.querySelector('.pod')
+
 // smallPod.innerText = 'Here is the small pod'
 smallPod.append(smallRow1)
 smallPod.append(smallRow2)
 smallPod.append(smallRow3)
 
 pod.append(smallPod)
+
+// STATION WORK <------------------------------------------------------------------------------
+
+const stationContainer = document.querySelector('.station-container')
+const staticStation = document.createElement('div')
+staticStation.setAttribute('class', 'station')
+staticStation.innerText = 'here is some typeing'
+stationContainer.append(staticStation)
 

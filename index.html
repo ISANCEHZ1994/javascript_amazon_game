@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon Simulation</title>
     <link rel='stylesheet' href="index.css"/> <!-- Gives the page style - GRABS INDEX.CSS -->
-
 </head>
 
 <body> 
@@ -17,44 +16,33 @@
         <p> You will be taking items and place them into pods (STOWING). Pod range from SMALL, MEDIUM, LARGE.  </p>
 
         <h2> RULES:</h2>
-        <ul id="rules">
-           
+        <ul class="rules">
+
         </ul>
-        <div id='button-container'>
-
+        <div class='button-container'>
         </div>
-        
-    </div>
 
-    
-
-    <!-- <div class='difficulty-container'>  STREACH GOALS 
-        <h2>Please Select A Level</h2>
-    </div> -->
+    </div> <!-- CLOSES intro-container -->
 
     <div class='game-container'>
-
+        
         <h1 id='timer'> </h1>
         <h1 id='times-up'></h1>
 
         <div class='pod-contanier'>
-            <div id='pod'>
-                
+            <div class='pod'>
+                <!-- here I want to swtich PODS when ARROWS are clicked -->
+                <!-- for now - we have created a div with an id of 'small-pod -->
+                <!--  -->
             </div>
         </div>
 
         <div class='station-container'>
-            <div >
-
-            </div>
-            <div>
-
-            </div>
+            
         </div>
-    </div>
-    
 
-
+    </div> <!-- CLOSES game-container -->
+   
     <script src="index.js"> </script>
 </body>
 
